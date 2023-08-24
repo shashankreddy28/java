@@ -1,2 +1,2 @@
 #notes
-
+// is how comments are added on java
