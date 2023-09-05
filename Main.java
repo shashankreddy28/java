@@ -1,4 +1,4 @@
-//*code prints sum of even numbers bw [1,10] */
+//*code prints sum of even numbers bw [1,10] including */
 class Main{
     public static void main (String[] args){
         int sum = 0;

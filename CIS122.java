@@ -50,6 +50,6 @@ public class CIS122 {
 // from the above example, f stands for floatingpoint but actually means double 
 // similarly d stand for digit but actually int.
 // %s stands for string  and %n stands for newline(only in printf)
-// "\n" generally stands for new line too
+// "\n" generally stands for new line 
 
 
