@@ -51,5 +51,6 @@ public class CIS122 {
 // similarly d stand for digit but actually int.
 // %s stands for string  and %n stands for newline(only in printf)
 // "\n" generally stands for new line also can be used in printf func
-
+//in boolean operators, && is 'and' and || is 'or'.
+// !(a&&b) is equal to !a || !b and vice versa
 
