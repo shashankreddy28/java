@@ -31,6 +31,7 @@ public class CIS122 {
         else {
             System.out.println("sqrt(2) squared minus 2 is " + delta);
         }
+        
 
 
     }
