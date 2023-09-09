@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 public class CIS122 {
     public static void main(String[] args) {
@@ -21,6 +21,7 @@ public class CIS122 {
         long roundedVariable = Math.round(variable);//round always returns long value if we want to use it as int, we will have to convert it.
         int roundeedInt = (int) roundedVariable;//converting the round to int type
         System.out.println(roundedVariable +"   " +roundeedInt);
+
         //avoiding round off errors:
         double r = Math.sqrt(2);
         double delta = (r*r) - 2;
@@ -31,9 +32,6 @@ public class CIS122 {
         else {
             System.out.println("sqrt(2) squared minus 2 is " + delta);
         }
-        
-
-
     }
 }
 /*make sure to always divide by a float to get exact result, the int division is not too good. 
@@ -54,4 +52,40 @@ public class CIS122 {
 // "\n" generally stands for new line also can be used in printf func
 //in boolean operators, && is 'and' and || is 'or'.
 // !(a&&b) is equal to !a || !b and vice versa
+// ScannerVariable.close();//this line is used to close the scanner object
 
+
+
+
+// #1
+// the following code is to find the position of the last vowel in a string.
+
+// public class CIS122{
+//     public static void main(String[] args)
+//     {
+//         Scanner in = new Scanner(System.in);
+//         String word = in.next();
+        
+//         int position = (word.length()-1);
+//         /* Your code goes here */
+//         char ch = '?';
+//         boolean found = false;
+        
+        
+//         while (!found && position>=0)
+//         {
+//             /* Your code goes here */
+//             ch = word.charAt(position);
+//             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+//             /* Your code goes here */
+//             found = true;
+//             }
+//             else{
+//                 position--;
+//             }
+//         }
+        
+//         System.out.println("Position: " + position);
+//         in.close();//this line is used to close the scanner object
+//     }
+// }
