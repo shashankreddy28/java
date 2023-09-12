@@ -1,4 +1,4 @@
-// import java.util.Scanner;
+//  import java.util.Scanner;
 
 public class CIS122 {
     public static void main(String[] args) {
@@ -21,6 +21,8 @@ public class CIS122 {
         long roundedVariable = Math.round(variable);//round always returns long value if we want to use it as int, we will have to convert it.
         int roundeedInt = (int) roundedVariable;//converting the round to int type
         System.out.println(roundedVariable +"   " +roundeedInt);
+        int CIS122 = 40;
+        System.out.println(CIS122);
 
         //avoiding round off errors:
         double r = Math.sqrt(2);
@@ -34,6 +36,8 @@ public class CIS122 {
         }
     }
 }
+
+
 /*make sure to always divide by a float to get exact result, the int division is not too good. 
  * the modulus func (%) gives a negative value when a negative value is there in the denominator or numerator, to avoid error
  * USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
