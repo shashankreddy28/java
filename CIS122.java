@@ -57,6 +57,7 @@ public class CIS122 {
 //in boolean operators, && is 'and' and || is 'or'.
 // !(a&&b) is equal to !a || !b and vice versa
 // ScannerVariable.close();//this line is used to close the scanner object
+// Math.round(number); returns a long type rather than an int, so always use (int)(Math.round(number));
 
 
 
