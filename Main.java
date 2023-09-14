@@ -1,20 +1,20 @@
 //*code prints sum of even numbers bw [1,10] including */
-class Main{
-    public static void main (String[] args){
-        int sum = 0;
-        for (int i=0; i<11;i++){
-            if (i%2==0){
-                System.out.println(i);
-                sum+=i;
-            }
-            else{
-                continue;
-            }
+// class Main{
+//     public static void main (String[] args){
+//         int sum = 0;
+//         for (int i=0; i<11;i++){
+//             if (i%2==0){
+//                 System.out.println(i);
+//                 sum+=i;
+//             }
+//             else{
+//                 continue;
+//             }
 
-        }
-        System.out.println(sum);
-    }
-}
+//         }
+//         System.out.println(sum);
+//     }
+// }
 
 
 
@@ -101,3 +101,14 @@ class Main{
 //       }
 //    }
 // }
+
+
+
+class Main {
+    public static void main(String[] args) {
+      System.out.println("Hello world!");
+      String h= "a12345";
+      int a = (int)(h.charAt(0));// does not convert it to integer, rather, returns the ascii value of character.
+      System.out.print(a);
+    }
+  }
