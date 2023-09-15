@@ -106,6 +106,22 @@ public class CIS122 {
 }
 
 
+
+
+
+// important info about Math.random function and shortcut:-
+// for (int)(Math.random() * (number of integers it expects))+(starting value of the range)
+// for intnum>=1 and intnum<10: we see that there could be 9 possible nums and starts at 1.
+// so it would be (int)(Math.random()*9)+1;
+
+
+
+
+
+
+
+
+
 /*make sure to always divide by a float to get exact result, the int division is not too good. 
  * the modulus func (%) gives a negative value when a negative value is there in the denominator or numerator, to avoid error
  * USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
