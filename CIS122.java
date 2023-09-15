@@ -82,6 +82,9 @@ public class CIS122 {
         // }
         // System.out.println(test);
 
+
+
+        //this is for a question where they ask to rearange the following lines of code and it takes input until the inpus is an integer, we need scanner in while loop otherwise it will go into an infinite loop
         boolean isint = false;
         System.out.println("enter homeruns:");
         // int hr =0;
@@ -95,18 +98,10 @@ public class CIS122 {
 
             }
             else{
-                System.out.println("Enter integer:");
-                
-                
+                System.out.println("Enter integer:");  
+                  
             }
         }
-        
-
-
-
-
-
-
     }
 }
 
