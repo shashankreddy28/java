@@ -2,57 +2,63 @@
 
 public class CIS122 {
     public static void main(String[] args) {
+
+///single line test statements:-
         //Scanner in = new Scanner(System.in);
-        System.out.println("Hello World!");
-        double mydouble = 10.1;
-        if(mydouble%10==(0)){
-            System.out.println("Yes");
-        }
-        else{
-            System.out.println("no");
-        }
+        // System.out.println("Hello World!");
+        // double mydouble = 10.1;
+        // if(mydouble%10==(0)){
+        //     System.out.println("Yes");
+        // }
+        // else{
+        //     System.out.println("no");
+        // }
 
-        double c= 4.951;
-        double bottle =1.949;
-        System.out.println(c+bottle);//doesnt give expected answer due to roundoff error
-        double vdouble =10;// automatically creates it into 10.0
+        // double c= 4.951;
+        // double bottle =1.949;
+        // System.out.println(c+bottle);//doesnt give expected answer due to roundoff error
+        // double vdouble =10;// automatically creates it into 10.0
 
-        int vint =10;
-        System.out.println(Math.pow(10, 3)); //looks like it always has decimal point with pow fnc
-        System.out.println(Math.pow(vdouble,3));
-        System.out.println(Math.pow(vint, 3));
+        // int vint =10;
+        // System.out.println(Math.pow(10, 3)); //looks like it always has decimal point with pow fnc
+        // System.out.println(Math.pow(vdouble,3));
+        // System.out.println(Math.pow(vint, 3));
 
-        System.out.println(Math.abs(3-10));//no decimal place
+        // System.out.println(Math.abs(3-10));//no decimal place
 
-        System.out.println(vdouble/vint);// give a double output
+        // System.out.println(vdouble/vint);// give a double output
 
-        System.out.println("Hey\nhello");
-        System.out.printf("Hey%nhello\n");
+        // System.out.println("Hey\nhello");
+        // System.out.printf("Hey%nhello\n");
 
-        int new_int = -14510;
-        System.out.println(new_int%100); //generally used to get the last 2 digits, but if the result is 0 then the last 2 digits are 00. when the number >= 0 otherwise, it will give negative of the last 2 digits so, to use it we will have to use abdsolte value of it
+        // int new_int = -14510;
+        // System.out.println(new_int%100); //generally used to get the last 2 digits, but if the result is 0 then the last 2 digits are 00. when the number >= 0 otherwise, it will give negative of the last 2 digits so, to use it we will have to use abdsolte value of it
         
-        double variable = 185.92 ;
-        long roundedVariable = Math.round(variable);//round always returns long value if we want to use it as int, we will have to convert it.
-        int roundeedInt = (int) roundedVariable;//converting the round to int type
+        // double variable = 185.92 ;
+        // long roundedVariable = Math.round(variable);//round always returns long value if we want to use it as int, we will have to convert it.
+        // int roundeedInt = (int) roundedVariable;//converting the round to int type
         
-        System.out.println(roundedVariable +"   " +roundeedInt);
-        int CIS122 = 40;//file name can be used as a variable
-        System.out.println(CIS122);
+        // System.out.println(roundedVariable +"   " +roundeedInt);
+        // int CIS122 = 40;//file name can be used as a variable
+        // System.out.println(CIS122);
 
-        // avoiding round off errors:
-            double r = Math.sqrt(2);
-            double delta = (r*r) - 2;
-            double EPSILON = 1E-14;
-            if (delta <= EPSILON ){
-                System.out.println("sqrt(2) squared minus 2 is 0");
-            }
-            else {
-                System.out.println("sqrt(2) squared minus 2 is " + delta);
-        }
+
+
+// // avoiding round off errors:
+        //     double r = Math.sqrt(2);
+        //     double delta = (r*r) - 2;
+        //     double EPSILON = 1E-14;
+        //     if (delta <= EPSILON ){
+        //         System.out.println("sqrt(2) squared minus 2 is 0");
+        //     }
+        //     else {
+        //         System.out.println("sqrt(2) squared minus 2 is " + delta);
+        // }
         
+       
         
-        ///*calculating volume of cube + volume of sphere */
+
+///*calculating volume of cube + volume of sphere */
         // double s = 1;
         // double d = 2;
         // double r = d/2;
@@ -62,8 +68,10 @@ public class CIS122 {
         // System.out.println(sq + sp);
         // int inputnum = in.nextInt();
         // System.out.println(inputnum);
+
         
-        ////checking for pythogorian triplet:
+
+////checking for pythogorian triplet:
         // int a = 2;
         // int b = 2;
         // int c = 4;
@@ -84,33 +92,63 @@ public class CIS122 {
 
 
 
-        //this is for a question where they ask to rearange the following lines of code and it takes input until the inpus is an integer, we need scanner in while loop otherwise it will go into an infinite loop
-        boolean isint = false;
-        System.out.println("enter homeruns:");
+
+
+////this is for a question where they ask to rearange the following lines of code and it takes input until the inpus is an integer, we need scanner in while loop otherwise it will go into an infinite loop
+        // boolean isint = false;
+        // System.out.println("enter homeruns:");
         
-        while (isint ==false){
+        // while (isint ==false){
             
-            Scanner in = new Scanner(System.in);
-            if(in.hasNextInt()){
-                int hr = in.nextInt();
-                System.out.println(hr);
-                isint = true;
+        //     Scanner in = new Scanner(System.in);
+        //     if(in.hasNextInt()){
+        //         int hr = in.nextInt();
+        //         System.out.println(hr);
+        //         isint = true;
 
-            }
-            else{
-                System.out.println("Enter integer:");  
+        //     }
+        //     else{
+        //         System.out.println("Enter integer:");  
                   
-            }
+        //     }
+        // }    
 
 
 
+
+//testing nested for loop that doesnt print full trianlge, be careful.
             // for (int j= 0;j<6;j++){
             //     for(int g = 7; g>j;g--){
             //         System.out.print("*");
             //     }
             //     System.out.println("");
             // }
+
+
+
+
+//understanding while loop:-
+        boolean done1 = false;
+        while(!done1){// this following loop will run once completely, just that the condition is checked after the first iteration of the loop is complete, in this case after the for loop is exited and there is nothe other statement in the while loop.
+            done1=true;
+            for (int i=1;i<=10;i++){
+                System.out.print(i);
+                if(i%2==0){
+                    String justEven = "Even";
+                    System.out.printf(" -> %5s\n",justEven);
+                }
+                else{
+                    String justOdd = "Odd";
+                    System.out.printf(" -> %5s\n",justOdd);
+                    
+                }
+            }   
         }
+
+
+
+
+
     }
 }
 
@@ -124,19 +162,10 @@ public class CIS122 {
 // so it would be (int)(Math.random()*9)+1;
 
 
-
-
-
-
-
-
-
 /*make sure to always divide by a float to get exact result, the int division is not too good. 
- * the modulus func (%) gives a negative value when a negative value is there in the denominator or numerator, to avoid error
- * USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
- * 
- * 
-*/
+the modulus func (%) gives a negative value when a negative value is there in the denominator or numerator, to avoid error
+USE Math.floorMod(a,b) as long as b is positive, it will not give negative value*/
+
 
 //use 'javac Main.java && java Main' this code in terminal runs both lines of code
 //convention to use 'UPPER_CASE' variable for consatnts.
