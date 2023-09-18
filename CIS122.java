@@ -128,22 +128,54 @@ public class CIS122 {
 
 
 //understanding while loop:-
-        boolean done1 = false;
-        while(!done1){// this following loop will run once completely, just that the condition is checked after the first iteration of the loop is complete, in this case after the for loop is exited and there is nothe other statement in the while loop.
-            done1=true;
-            for (int i=1;i<=10;i++){
-                System.out.print(i);
-                if(i%2==0){
-                    String justEven = "Even";
-                    System.out.printf(" -> %5s\n",justEven);
-                }
-                else{
-                    String justOdd = "Odd";
-                    System.out.printf(" -> %5s\n",justOdd);
+        // boolean done1 = false;
+        // while(!done1){// this following loop will run once completely, just that the condition is checked after the first iteration of the loop is complete, in this case after the for loop is exited and there is nothe other statement in the while loop.
+        //     done1=true;
+        //     for (int i=1;i<=10;i++){
+        //         System.out.print(i);
+        //         if(i%2==0){
+        //             String justEven = "Even";
+        //             System.out.printf(" -> %5s\n",justEven);
+        //         }
+        //         else{
+        //             String justOdd = "Odd";
+        //             System.out.printf(" -> %5s\n",justOdd);
                     
-                }
-            }   
-        }
+        //         }
+        //     }   
+        // }
+
+
+//the following code reverses a string: more importantly, we can see that a char can be added to a String
+        // Scanner in = new Scanner(System.in);
+        // System.out.print("Enter a word: ");
+        // String s = in.next(); // reverse only 1 word
+        // //String s = in.nextLine();// this is to reverse a whole line
+        // /* Implement this pseudocode:
+        // r = ""        
+        // i = 0        
+        // while i < length of s
+        //     c = ith character of s
+        //     r = c + r
+        //     i++
+        // */
+        // String r = "";
+        // int i = 0;
+        // while (i<s.length()){
+        // char c = s.charAt(i);
+        // //String c = s.substring(i,i+1); //this also works, remember that there is no capital S.
+        // r = c+r;
+        // i++;
+        // }
+
+        // System.out.println(r);
+
+
+// char concatination and how it works, its not straight
+        char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
+        char ch1 = 'a' +1; // this gives the next char.
+        System.out.println(ch);
+        System.out.println(ch1);
 
 
 
@@ -181,8 +213,9 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 // ScannerVariable.close();//this line is used to close the scanner object
 // Math.round(number); returns a long type rather than an int, so always use (int)(Math.round(number));
 
+// in java the substring function is written in the following form : word.substring(initial value, final value+1 or word.length())
 
-
+//ch = 'a' + 'b'; will return a char
 
 // #1
 // the following code is to find the position of the last vowel in a string.
