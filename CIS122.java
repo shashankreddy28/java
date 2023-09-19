@@ -1,4 +1,4 @@
- import java.util.Scanner;
+// import java.util.Scanner;
 
 // public class CIS122 {
 //     public static void main(String[] args) {
@@ -172,10 +172,10 @@
 
 
 // char concatination and how it works, its not straight
-        // char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
-        // char ch1 = 'a' +1; // this gives the next char.
-        // System.out.println(ch);
-        // System.out.println(ch1);
+//         char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
+//         char ch1 = 'a' +1; // this gives the next char.
+//         System.out.println(ch);
+//         System.out.println(ch1);
 
 
 
@@ -253,22 +253,64 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 // #2
 // smart code to reverse a positive number:
-public class CIS122 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        // TODO: Print the digits of n in reverse
+// public class CIS122 {
+//     public static void main(String[] args) {
+//         Scanner in = new Scanner(System.in);
+//         int n = in.nextInt();
+//         // Printing the digits of n in reverse
       
-        while (n>0  /* Your code goes here */)
-            {
-                int digit = n%10;
-                /* Your code goes here */
-                System.out.print(digit);
-                /* Your code goes here */
-                n=n/10;
-            }
+//         while (n>0  /* Your code goes here */)
+//             {
+//                 int digit = n%10;
+//                 /* Your code goes here */
+//                 System.out.print(digit);
+//                 /* Your code goes here */
+//                 n=n/10;
+//             }
             
-        System.out.println();
+//         System.out.println();
 
-    }
+//     }
+// }
+
+
+//#3
+//code to convert a int to binary in reverse order and then reverse it to make it original
+import java.util.Scanner; 
+
+public class CIS122 {
+   
+   /* Define your methods here */ 
+   public static String intToReverseBinary(int integerValue){
+      String r = "";
+      while(integerValue>0){
+         r=r+(integerValue % 2);
+         integerValue=integerValue/2;
+         }
+      return r;
+      }
+   public static String stringReverse(String inputString){
+      String r = "";
+      for (int x=inputString.length()-1;x>=0;x--){
+         r+=inputString.charAt(x);
+         }
+      return r;
+      
+      }
+   
+   public static void main(String[] args) {
+      /* Type your code here. 
+         Your code must call intToReverseBinary() to get
+         the binary string of an integer in a reverse order.
+         Then call stringReverse() to reverse the string 
+         returned from intToReverseBinary().*/
+         Scanner in = new Scanner(System.in);
+         //int input = in.nextInt();
+         String reverseBinary = intToReverseBinary(in.nextInt()/*input*/);
+         String finalString = stringReverse(reverseBinary);
+         System.out.println(finalString);
+         
+         
+   }
 }
+
