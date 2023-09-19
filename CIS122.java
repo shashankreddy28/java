@@ -276,41 +276,75 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 //#3
 //code to convert a int to binary in reverse order and then reverse it to make it original
-import java.util.Scanner; 
+// import java.util.Scanner; 
+
+// public class CIS122 {
+   
+//    /* Define your methods here */ 
+//    public static String intToReverseBinary(int integerValue){
+//       String r = "";
+//       while(integerValue>0){
+//          r=r+(integerValue % 2);
+//          integerValue=integerValue/2;
+//          }
+//       return r;
+//       }
+//    public static String stringReverse(String inputString){
+//       String r = "";
+//       for (int x=inputString.length()-1;x>=0;x--){
+//          r+=inputString.charAt(x);
+//          }
+//       return r;
+      
+//       }
+   
+//    public static void main(String[] args) {
+//       /* Type your code here. 
+//          Your code must call intToReverseBinary() to get
+//          the binary string of an integer in a reverse order.
+//          Then call stringReverse() to reverse the string 
+//          returned from intToReverseBinary().*/
+//          Scanner in = new Scanner(System.in);
+//          //int input = in.nextInt();
+//          String reverseBinary = intToReverseBinary(in.nextInt()/*input*/);
+//          String finalString = stringReverse(reverseBinary);
+//          System.out.println(finalString);
+         
+         
+//    }
+// }
+
+
+//#4
+//code to flip coin multiple times using random.rand
+
+import java.util.Scanner;
+import java.util.Random;
 
 public class CIS122 {
    
-   /* Define your methods here */ 
-   public static String intToReverseBinary(int integerValue){
-      String r = "";
-      while(integerValue>0){
-         r=r+(integerValue % 2);
-         integerValue=integerValue/2;
-         }
-      return r;
+   /* Define your method here */
+   public static String coinFlip(Random rand){
+      int output = (int)(/*Math.random()*2*/rand.nextInt(2));
+      if(output==1){
+         return "Heads";
       }
-   public static String stringReverse(String inputString){
-      String r = "";
-      for (int x=inputString.length()-1;x>=0;x--){
-         r+=inputString.charAt(x);
-         }
-      return r;
-      
+      else{
+         return "Tails";
       }
+   }
    
    public static void main(String[] args) {
-      /* Type your code here. 
-         Your code must call intToReverseBinary() to get
-         the binary string of an integer in a reverse order.
-         Then call stringReverse() to reverse the string 
-         returned from intToReverseBinary().*/
-         Scanner in = new Scanner(System.in);
-         //int input = in.nextInt();
-         String reverseBinary = intToReverseBinary(in.nextInt()/*input*/);
-         String finalString = stringReverse(reverseBinary);
-         System.out.println(finalString);
-         
-         
+      Scanner scnr = new Scanner(System.in);
+      int input = scnr.nextInt();
+      Random rand = new Random(2); // Seed used in develop mode
+      // Add more variables as needed
+      
+      for(int i =0;i<input;i++){
+         System.out.println(coinFlip(rand));
+         }
+
+      /* Type your code here. */
    }
 }
 
