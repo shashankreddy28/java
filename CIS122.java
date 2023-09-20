@@ -1,7 +1,7 @@
-// import java.util.Scanner;
+import java.util.Scanner;
 
-// public class CIS122 {
-//     public static void main(String[] args) {
+public class CIS122 {
+    public static void main(String[] args) {
 
 ///single line test statements:-
         //Scanner in = new Scanner(System.in);
@@ -171,18 +171,18 @@
         // System.out.println(r);
 
 
-// char concatination and how it works, its not straight
-//         char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
-//         char ch1 = 'a' +1; // this gives the next char.
-//         System.out.println(ch);
-//         System.out.println(ch1);
+//// char concatination and how it works, its not straight
+        char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
+        char ch1 = 'a' +1; // this gives the next char.
+        System.out.println(ch);
+        System.out.println(ch1);
 
 
 
 
 
-//     }
-// }
+    }
+}
 
 
 
@@ -215,7 +215,14 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 // in java the substring function is written in the following form : word.substring(initial value, final value+1 or word.length())
 
-//ch = 'a' + 'b'; will return a char
+//ch = 'a' + 'b'; will return a char that is the char of the sum of the ascii values of a and b. 
+
+
+
+
+
+
+
 
 // #1
 // the following code is to find the position of the last vowel in a string.
@@ -251,6 +258,12 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 // }
 
 
+
+
+
+
+
+
 // #2
 // smart code to reverse a positive number:
 // public class CIS122 {
@@ -272,6 +285,12 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 //     }
 // }
+
+
+
+
+
+
 
 
 //#3
@@ -315,36 +334,43 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 // }
 
 
+
+
+
+
+
+
+
 //#4
 //code to flip coin multiple times using random.rand
 
-import java.util.Scanner;
-import java.util.Random;
+// import java.util.Scanner;
+// import java.util.Random;
 
-public class CIS122 {
+// public class CIS122 {
    
-   /* Define your method here */
-   public static String coinFlip(Random rand){
-      int output = (int)(/*Math.random()*2*/rand.nextInt(2));
-      if(output==1){
-         return "Heads";
-      }
-      else{
-         return "Tails";
-      }
-   }
+//    /* Define your method here */
+//    public static String coinFlip(Random rand){
+//       int output = (int)(/*Math.random()*2*/rand.nextInt(2));
+//       if(output==1){
+//          return "Heads";
+//       }
+//       else{
+//          return "Tails";
+//       }
+//    }
    
-   public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in);
-      int input = scnr.nextInt();
-      Random rand = new Random(2); // Seed used in develop mode
-      // Add more variables as needed
+//    public static void main(String[] args) {
+//       Scanner scnr = new Scanner(System.in);
+//       int input = scnr.nextInt();
+//       Random rand = new Random(2); // Seed used in develop mode
+//       // Add more variables as needed
       
-      for(int i =0;i<input;i++){
-         System.out.println(coinFlip(rand));
-         }
+//       for(int i =0;i<input;i++){
+//          System.out.println(coinFlip(rand));
+//          }
 
-      /* Type your code here. */
-   }
-}
+//       /* Type your code here. */
+//    }
+// }
 
