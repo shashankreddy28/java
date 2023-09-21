@@ -172,18 +172,28 @@ public class CIS122 {
 
 
 //// char concatination and how it works, its not straight
-        char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
-        char ch1 = 'a' +1; // this gives the next char.
-        System.out.println(ch);
-        System.out.println(ch1);
+        // char ch = 'a' + 'b'; // this looks for the ascii value of a and b and add them and return the char of that value
+        // char ch1 = 'a' +1; // this gives the next char.
+        // System.out.println(ch);
+        // System.out.println(ch1);
+
+
+// //### 
+        System.out.println("Hello world!");
+        yes(4); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
+        System.out.println("ca+bottle");
 
 
 
 
 
     }
+//// code that shows that you can call a function and not initialize it to anything and it wouldnt be an error
+////this is for code mentioned with ###.
+        public static int yes(int x){
+                return x;
+        }
 }
-
 
 
 
