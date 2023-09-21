@@ -42,6 +42,16 @@ public class CIS122 {
         // int CIS122 = 40;//file name/class name can be used as a variable
         // System.out.println(CIS122);
 
+//using lastIndexOf fnc
+        String str = "this is a long sentence.";
+        int lastPos = str.lastIndexOf(" ");
+        int firstPosI = str.indexOf('i'); // so char can be used as well
+        int firstPosDNE = str.indexOf('A');
+        System.out.printf("%d is the last index of \" \"\n",lastPos);
+        System.out.printf("%d is the first index of 'i'\n",firstPosI);
+        System.out.printf("%d is the first index of 'A'\n",firstPosDNE); //returns -1 when the char doesnt exist in the string
+
+
 
 
 // // avoiding round off errors:
