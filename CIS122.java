@@ -39,7 +39,7 @@ public class CIS122 {
         // int roundeedInt = (int) roundedVariable;//converting the round to int type
         
         // System.out.println(roundedVariable +"   " +roundeedInt);
-        // int CIS122 = 40;//file name can be used as a variable
+        // int CIS122 = 40;//file name/class name can be used as a variable
         // System.out.println(CIS122);
 
 
@@ -179,21 +179,33 @@ public class CIS122 {
 
 
 // //### 
-        System.out.println("Hello world!");
-        yes(4); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
-        System.out.println("ca+bottle");
+        // System.out.println("Hello world!");
+        // yes(4); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
+        // System.out.println("ca+bottle");
 
 
 
 
 
-    }
+    }//end of main method
+
+
+
+
+////Methods that I might use
+
+
 //// code that shows that you can call a function and not initialize it to anything and it wouldnt be an error
 ////this is for code mentioned with ###.
+        
+////method1(just reurns value)
         public static int yes(int x){
                 return x;
         }
-}
+
+
+        
+}//end of class
 
 
 
