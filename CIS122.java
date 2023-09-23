@@ -202,7 +202,7 @@ public class CIS122 {
 
 
 
-////Methods that I might use
+//// newMethods 
 
 
 //// code that shows that you can call a function and not initialize it to anything and it wouldnt be an error
@@ -219,6 +219,9 @@ public class CIS122 {
 
 
 
+
+
+//single line notes: very helpful!
 
 // important info about Math.random function and shortcut:-
 // for (int)(Math.random() * (number of integers it expects))+(starting value of the range)
@@ -249,7 +252,7 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 //ch = 'a' + 'b'; will return a char that is the char of the sum of the ascii values of a and b. 
 
-
+//a method with void as the return type can have a 'return ;' this basically returns nothing, which is fin ewith void. 
 
 
 
