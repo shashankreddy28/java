@@ -194,7 +194,9 @@ public class CIS122 {
         // System.out.println("ca+bottle");
 
 
-
+////understanding recursive function, calling method 2
+        String word = "some String";
+        System.out.println(everySecond(word));
 
 
     }//end of main method
@@ -213,7 +215,23 @@ public class CIS122 {
                 return x;
         }
 
+////method 2 for recursive function (this prints every second element of a string):
 
+public static String everySecond(String s)
+   {
+      //String str = "";
+      if (s.length() <= 1)
+      {
+         return s;
+      }
+      else
+      {
+         String simpler = everySecond(s.substring(2)/* Your code goes here */);
+         return s.charAt(0)+simpler/* Your code goes here */;
+      }
+   }
+   
+   
         
 }//end of class
 
@@ -227,6 +245,8 @@ public class CIS122 {
 // for (int)(Math.random() * (number of integers it expects))+(starting value of the range)
 // for intnum>=1 and intnum<10: we see that there could be 9 possible nums and starts at 1.
 // so it would be (int)(Math.random()*9)+1;
+// like python, x*=2 is the same as x = x*2;
+
 
 
 /*make sure to always divide by a float to get exact result, the int division is not too good. 
