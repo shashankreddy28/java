@@ -275,7 +275,8 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //a method with void as the return type can have a 'return ;' this basically returns nothing, which is fin ewith void. 
 
 
-
+// an array of boolean values will have 'false' as the default values
+// an array of String values will have null as the default values
 
 
 
