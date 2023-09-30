@@ -211,8 +211,9 @@ public class CIS122 {
 ////this is for code mentioned with ###.
         
 ////method1(just reurns value)
-        public static int yes(int x){
-                return x;
+public static int yes(int x)
+        {
+        return x;
         }
 
 ////method 2 for recursive function (this prints every second element of a string):
@@ -277,6 +278,13 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 // an array of boolean values will have 'false' as the default values
 // an array of String values will have null as the default values
+
+
+
+
+
+
+
 
 
 
@@ -428,5 +436,36 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 //       /* Type your code here. */
 //    }
+// }
+
+
+
+
+//#5
+/**Just a template for how to add elements in an array and moving the rest to 1 pos right */
+// if (currentSize < values.length)
+// {
+//    currentSize++;
+//    for (int i = currentSize - 1; i > pos; i--)
+//    {
+//       values[i] = values[i - 1];
+//    }
+//    values[pos] = newElement;
+// }
+
+// #6
+// ** Just a template of how make a dynamic array, so hte length should automatically increase when we want to add element and the array is full.
+// double[] inputs = new double[INITIAL_SIZE];
+// int currentSize = 0;
+// while (in.hasNextDouble())
+// { 
+//    // Grow the array if it has been completely filled
+//    if (currentSize >= inputs.length)
+//    {
+//       inputs = Arrays.copyOf(inputs, 2 * inputs.length); // Grow the inputs array
+//    }
+
+//    inputs[currentSize] = in.nextDouble();
+//    currentSize++;
 // }
 
