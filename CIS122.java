@@ -361,9 +361,7 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //code to convert a int to binary in reverse order and then reverse it to make it original
 // import java.util.Scanner; 
 
-// public class CIS122 {
-   
-//    /* Define your methods here */ 
+// public class CIS122 { 
 //    public static String intToReverseBinary(int integerValue){
 //       String r = "";
 //       while(integerValue>0){
@@ -441,8 +439,9 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 
 
-//#5
+//#5 
 /**Just a template for how to add elements in an array and moving the rest to 1 pos right */
+// remember that when we add element at a specific position, we traverse backwards.
 // if (currentSize < values.length)
 // {
 //    currentSize++;
@@ -452,6 +451,9 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //    }
 //    values[pos] = newElement;
 // }
+
+
+
 
 // #6
 // ** Just a template of how make a dynamic array, so hte length should automatically increase when we want to add element and the array is full.
@@ -469,3 +471,10 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //    currentSize++;
 // }
 
+// #7 
+// code template for removing an element from array and moving the rest to the left
+// for (int i = pos + 1; i < currentSize; i++)
+// { 
+//         values[i - 1] = values[i]; 
+//      }
+//      currentSize--;
