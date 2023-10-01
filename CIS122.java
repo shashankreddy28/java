@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CIS122 {
@@ -43,13 +44,13 @@ public class CIS122 {
         // System.out.println(CIS122);
 
 //using lastIndexOf fnc
-        String str = "this is a long sentence.";
-        int lastPos = str.lastIndexOf(" ");
-        int firstPosI = str.indexOf('i'); // so char can be used as well
-        int firstPosDNE = str.indexOf('A');
-        System.out.printf("%d is the last index of \" \"\n",lastPos);
-        System.out.printf("%d is the first index of 'i'\n",firstPosI);
-        System.out.printf("%d is the first index of 'A'\n",firstPosDNE); //returns -1 when the char doesnt exist in the string
+        // String str = "this is a long sentence.";
+        // int lastPos = str.lastIndexOf(" ");
+        // int firstPosI = str.indexOf('i'); // so char can be used as well
+        // int firstPosDNE = str.indexOf('A');
+        // System.out.printf("%d is the last index of \" \"\n",lastPos);
+        // System.out.printf("%d is the first index of 'i'\n",firstPosI);
+        // System.out.printf("%d is the first index of 'A'\n",firstPosDNE); //returns -1 when the char doesnt exist in the string
 
 
 
@@ -127,12 +128,12 @@ public class CIS122 {
 
 
 //testing nested for loop that doesnt print full trianlge, be careful.
-            // for (int j= 0;j<6;j++){
-            //     for(int g = 7; g>j;g--){
-            //         System.out.print("*");
-            //     }
-            //     System.out.println("");
-            // }
+        //     for (int j= 0;j<6;j++){
+        //         for(int g = 7; g>j;g--){
+        //             System.out.print("*");
+        //         }
+        //         System.out.println("");
+        //     }
 
 
 
@@ -195,9 +196,28 @@ public class CIS122 {
 
 
 ////understanding recursive function, calling method 2
-        String word = "some String";
-        System.out.println(everySecond(word));
+        // String word = "some String";
+        // System.out.println(everySecond(word));
 
+
+////ArrayList testing
+//// use import java.util.ArrayList; first import before use
+        ArrayList<Integer> arrList = new ArrayList<Integer>();
+        arrList.add(1);
+        
+        System.out.println(arrList.get(0)); // .get(x) gets element at teh index x.
+        System.out.println(arrList); //we can print whole array list at once
+        for(int i =1;i<10;i++){
+                arrList.add(i+1);
+        }
+
+        arrList.set(0,100); // use .set(index, element) to set element at index to element
+        arrList.set(arrList.size()-1,100); // the index should already exist so we cant add an element using .set() fnc
+
+        for (int element:arrList){ // we can use enhanced for loop in array list too
+                System.out.println(element);
+        }
+        //System.out.println(arrList.size()); //this is similar to .length of a normal list
 
     }//end of main method
 
