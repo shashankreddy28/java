@@ -1,3 +1,4 @@
+import java.lang.ref.Reference;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -205,8 +206,8 @@ public class CIS122 {
         ArrayList<Integer> arrList = new ArrayList<Integer>();
         arrList.add(1);
         
-        System.out.println(arrList.get(0)); // .get(x) gets element at teh index x.
-        System.out.println(arrList); //we can print whole array list at once
+        System.out.println(arrList.get(0)); // .get(x) gets element at the index x.
+        System.out.println(arrList); //we can print whole array list at once which is not teh same in arrays
         for(int i =1;i<10;i++){
                 arrList.add(i+1);
         }
@@ -217,6 +218,12 @@ public class CIS122 {
         for (int element:arrList){ // we can use enhanced for loop in array list too
                 System.out.println(element);
         }
+        ArrayList<Integer> arrListSameReference = arrList; // this is a pointer that points to teh sam earraylist, so if 1 changes, the other changes too.
+        arrList.add(101);
+        System.out.println(arrListSameReference);
+        ArrayList<Integer> arrListcopy = new ArrayList<Integer>(arrList); // this is a copy of replica for arraylists.It creats a new arraylist with the same values as the initial arraylist
+        arrList.add(102);
+        System.out.println(arrListcopy);
         //System.out.println(arrList.size()); //this is similar to .length of a normal list
 
     }//end of main method
@@ -405,6 +412,7 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //          the binary string of an integer in a reverse order.
 //          Then call stringReverse() to reverse the string 
 //          returned from intToReverseBinary().*/
+
 //          Scanner in = new Scanner(System.in);
 //          //int input = in.nextInt();
 //          String reverseBinary = intToReverseBinary(in.nextInt()/*input*/);
