@@ -1,4 +1,3 @@
-import java.lang.ref.Reference;
 import java.util.ArrayList;
 import java.util.Scanner;
 
