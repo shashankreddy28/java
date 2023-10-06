@@ -33,6 +33,19 @@ public class game {
         
 
     }
+    // potential column check func
+    // public static boolean checkCol(String[][] board, int col)
+    // {
+    //   boolean misMatch = false;
+    //   String firstVal = board[0][col]; 
+    //   for(int row = 1; row<board.length;row++){
+    //      if(firstVal!=board[row][col]){
+    //         misMatch=true;
+    //         break;
+    //      }
+    //   }
+    //   return !misMatch/* Your code goes here */;
+    // }
 
     public static char columnsCheck(char[] gameList,int[] x , int[] o){
         char returnVal ='N';
@@ -118,3 +131,6 @@ public class game {
     }
     
 }
+
+
+
