@@ -189,10 +189,10 @@ public class CIS122 {
         // System.out.println(ch1);
 
 
-// //### 
-        // System.out.println("Hello world!");
-        // yes(4); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
-        // System.out.println("ca+bottle");
+// //### Using method1
+        System.out.println("Hello world!");
+        yes("4"); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
+        System.out.println(yes("45"));
 
 
 ////understanding recursive function, calling method 2
@@ -202,28 +202,34 @@ public class CIS122 {
 
 ////ArrayList testing
 //// use import java.util.ArrayList; first import before use
-        ArrayList<Integer> arrList = new ArrayList<Integer>();
-        arrList.add(1);
+        // ArrayList<Integer> arrList = new ArrayList<Integer>();
+        // arrList.add(1);
         
-        System.out.println(arrList.get(0)); // .get(x) gets element at the index x.
-        System.out.println(arrList); //we can print whole array list at once which is not teh same in arrays
-        for(int i =1;i<10;i++){
-                arrList.add(i+1);
-        }
+        // System.out.println(arrList.get(0)); // .get(x) gets element at the index x.
+        // System.out.println(arrList); //we can print whole array list at once which is not teh same in arrays
+        // for(int i =1;i<10;i++){
+        //         arrList.add(i+1);
+        // }
 
-        arrList.set(0,100); // use .set(index, element) to set element at index to element
-        arrList.set(arrList.size()-1,100); // the index should already exist so we cant add an element using .set() fnc
+        // arrList.set(0,100); // use .set(index, element) to set element at index to element
+        // arrList.set(arrList.size()-1,100); // the index should already exist so we cant add an element using .set() fnc
 
-        for (int element:arrList){ // we can use enhanced for loop in array list too
-                System.out.println(element);
-        }
-        ArrayList<Integer> arrListSameReference = arrList; // this is a pointer that points to teh sam earraylist, so if 1 changes, the other changes too.
-        arrList.add(101);
-        System.out.println(arrListSameReference);
-        ArrayList<Integer> arrListcopy = new ArrayList<Integer>(arrList); // this is a copy of replica for arraylists.It creats a new arraylist with the same values as the initial arraylist
-        arrList.add(102);
-        System.out.println(arrListcopy);
+        // for (int element:arrList){ // we can use enhanced for loop in array list too
+        //         System.out.println(element);
+        // }
+        // ArrayList<Integer> arrListSameReference = arrList; // this is a pointer that points to teh sam earraylist, so if 1 changes, the other changes too.
+        // arrList.add(101);
+        // System.out.println(arrListSameReference);
+        // ArrayList<Integer> arrListcopy = new ArrayList<Integer>(arrList); // this is a copy of replica for arraylists.It creats a new arraylist with the same values as the initial arraylist
+        // arrList.add(102);
+        // System.out.println(arrListcopy);
         //System.out.println(arrList.size()); //this is similar to .length of a normal list
+
+
+// 2d array practice activity accessing method3
+        int[][] twoDArray = {{1,2},{3,4,10},{6,7},{-1,50}};
+        int[] sol = findMinMax(twoDArray);
+        for (int element:sol){System.out.println(element);}
 
     }//end of main method
 
@@ -237,7 +243,7 @@ public class CIS122 {
 ////this is for code mentioned with ###.
         
 ////method1(just reurns value)
-public static int yes(int x)
+public static String yes(String x) //if the method needs to be used inside the class, then we should use the static modifier
         {
         return x;
         }
@@ -246,19 +252,33 @@ public static int yes(int x)
 
 public static String everySecond(String s)
    {
-      //String str = "";
       if (s.length() <= 1)
       {
          return s;
       }
       else
       {
-         String simpler = everySecond(s.substring(2)/* Your code goes here */);
-         return s.charAt(0)+simpler/* Your code goes here */;
+         String simpler = everySecond(s.substring(2));
+         return s.charAt(0)+simpler;
       }
    }
+ 
    
-   
+// method3 for the activity provided by mavpass.
+public static int[] findMinMax(int[][] input){
+        int[] result = new int[2];
+        int min = input[0][0];
+        int max =input[0][0];
+        for(int row=0;row<input.length;row++){
+                for(int column = 0;column<input[row].length;column++){
+                        if(input[row][column]>max){max = input[row][column];}
+                        if(input[row][column]<min){min = input[row][column];}
+                }
+        }
+        result[0]=min;
+        result[1] = max;
+        return result;
+        }   
         
 }//end of class
 
@@ -276,10 +296,11 @@ public static String everySecond(String s)
 
 
 
-/*make sure to always divide by a float to get exact result, the int division is not too good. 
+/*make sure to always divide by a float to get exact result, the int division is the same as floor division in python. 
 the modulus func (%) gives a negative value when a negative value is there in the denominator or numerator, to avoid error
 USE Math.floorMod(a,b) as long as b is positive, it will not give negative value*/
 
+// remember that when you are assigning something to Math.pow(), it will return double type so make sure to assign it to a double type
 
 //use 'javac Main.java && java Main' this code in terminal runs both lines of code
 //convention to use 'UPPER_CASE' variable for consatnts.
@@ -458,8 +479,6 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //       for(int i =0;i<input;i++){
 //          System.out.println(coinFlip(rand));
 //          }
-
-//       /* Type your code here. */
 //    }
 // }
 
