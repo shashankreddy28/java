@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class game {
 
 
-//error in while loop (logical error)
+//not asking to reenter when user enters an existing position
     public static boolean checkGameOver(char[] gameList,int[] x , int[] o){
         boolean status = false;
         if (rowsCheck(gameList) == 'X' || rowsCheck(gameList) == 'O'){
