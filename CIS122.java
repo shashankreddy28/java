@@ -190,9 +190,9 @@ public class CIS122 {
 
 
 // //### Using method1
-        System.out.println("Hello world!");
-        yes("4"); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
-        System.out.println(yes("45"));
+        // System.out.println("Hello world!");
+        // yes("4"); // just 4; would give an error but a function call that returns the smae can just be as itself with no error
+        // System.out.println(yes("45"));
 
 
 ////understanding recursive function, calling method 2
