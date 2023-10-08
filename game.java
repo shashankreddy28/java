@@ -36,19 +36,6 @@ public class game {
         
 
     }
-    // potential column check func
-    // public static boolean checkCol(String[][] board, int col)
-    // {
-    //   boolean misMatch = false;
-    //   String firstVal = board[0][col]; 
-    //   for(int row = 1; row<board.length;row++){
-    //      if(firstVal!=board[row][col]){
-    //         misMatch=true;
-    //         break;
-    //      }
-    //   }
-    //   return !misMatch/* Your code goes here */;
-    // }
 
     public static char columnsCheck(char[] gameList){
         char returnVal ='N';
@@ -87,11 +74,12 @@ public class game {
 }
 
     public static void createStructure(char[] gameList){
-            System.out.printf(" %c | %c | %c \t 1 | 2 | 3 \n",gameList[0] , gameList[1] , gameList[2]);
-            System.out.println("--- --- --- \t--- --- ---");
-            System.out.printf(" %c | %c | %c \t 4 | 5 | 6 \n",gameList[3] , gameList[4] , gameList[5]);
-            System.out.println("--- --- --- \t--- --- ---");
-            System.out.printf(" %c | %c | %c \t 7 | 8 | 9 \n",gameList[6] , gameList[7] , gameList[8]);
+            System.out.println("\t Current Game \t Template");
+            System.out.printf("\t %c | %c | %c \t 1 | 2 | 3 \n",gameList[0] , gameList[1] , gameList[2]);
+            System.out.println("\t--- --- --- \t--- --- ---");
+            System.out.printf("\t %c | %c | %c \t 4 | 5 | 6 \n",gameList[3] , gameList[4] , gameList[5]);
+            System.out.println("\t--- --- --- \t--- --- ---");
+            System.out.printf("\t %c | %c | %c \t 7 | 8 | 9 \n",gameList[6] , gameList[7] , gameList[8]);
     }
     public static void main(String[] args){
         boolean gameOver =false;
@@ -112,48 +100,62 @@ public class game {
                 
                     int xInput;
                     int xIndex;
+                    char prevXIndex ;
                     do{
                         System.out.println("Player 'X' enter position to place 'X':");
                         xInput = in.nextInt();
                         xIndex = xInput-1; // this is basically converting the user's input to the index on the list, like if they want to enter 1 but the index of first element is 0.
-                        if((xInput>=1 && xInput<=9)&&(gameList[xIndex]!='X'&&gameList[xIndex]!='O')){
-                            x[xCount]=xInput;
-                            gameList[xIndex]='X';
-                            gameOver = checkGameOver(gameList, x, o);
-                            xCount++;
-                            createStructure(gameList);
+                        prevXIndex = 'R';
+                        if(xInput>=1 && xInput<=9){
+                            prevXIndex=gameList[xIndex];
+                            if(prevXIndex!='X'&&prevXIndex!='O'){
+                                System.out.println("entered if loop");//debugging
+                                x[xCount]=xInput;
+                                gameList[xIndex]='X';
+                                gameOver = checkGameOver(gameList, x, o);
+                                xCount++;
+                                createStructure(gameList);
+                            }
                         }
                     }
-                    while(!(xInput>=1 && xInput<=9)&&(gameList[xIndex]!='X'&&gameList[xIndex]!='O')); // makes sure user enters valid input
+                    while ((xInput<1 ||xInput>9)||!(prevXIndex!='X'&&prevXIndex!='O'));
+
             if (!gameOver){
                 int oInput;
                 int oIndex;
+                char prevOIndex;
                 do{
                 System.out.println("Player 'O' enter position to place 'O':");
                 oInput = in.nextInt();
                 oIndex = oInput - 1;
-                if((oInput>=1 &&oInput<=9)&&(gameList[oIndex]!='X'&&gameList[oIndex]!='O')){
-                    o[oCount]=oInput;
-                    gameList[oIndex]='O';
-                    gameOver = checkGameOver(gameList, x, o);
-                    oCount++;
-                    createStructure(gameList);
+                prevOIndex = gameList[oIndex];
+                if(oInput>=1 &&oInput<=9){
+                    if(prevOIndex!='X'&&prevOIndex!='O'){
+                        System.out.println("Entered if loop (player o)");
+                        o[oCount]=oInput;
+                        gameList[oIndex]='O';
+                        gameOver = checkGameOver(gameList, x, o);
+                        oCount++;
+                        createStructure(gameList);
+                    }
 
                     
                 }
-            }while(!(oInput>=1 &&oInput<=9)&&(gameList[oIndex]!='X'&&gameList[oIndex]!='O'));
+            }
+            while ((oInput<1 ||oInput>9)||!(prevOIndex!='X'&&prevOIndex!='O'));
             }
         }
         }//end of for loop
-        if(!gameOver)
-        {for(int i =0; i<gameList.length;i++){
-            if(gameList[i]=='N'){
-                gameList[i]='X';
+        if(!gameOver){
+            for(int i =0; i<gameList.length;i++){
+                if(gameList[i]=='N'){
+                    gameList[i]='X';
+                }
             }
-        }
-        gameOver = checkGameOver(gameList, x, o);
+            gameOver = checkGameOver(gameList, x, o);
         }
         if(!gameOver){System.out.println("Tie");}
+        else{createStructure(gameList);}
         in.close();
     }
     
