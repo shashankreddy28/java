@@ -109,12 +109,11 @@ public class game {
 
         for(int i=0;i<4;i++){
             if(!gameOver){
-                //if(!gameOver){
+                
                     int xInput;
                     int xIndex;
                     do{
                         System.out.println("Player 'X' enter position to place 'X':");
-                        // createTemplate();
                         xInput = in.nextInt();
                         xIndex = xInput-1; // this is basically converting the user's input to the index on the list, like if they want to enter 1 but the index of first element is 0.
                         if((xInput>=1 && xInput<=9)&&(gameList[xIndex]!='X'&&gameList[xIndex]!='O')){
@@ -126,7 +125,6 @@ public class game {
                         }
                     }
                     while(!(xInput>=1 && xInput<=9)&&(gameList[xIndex]!='X'&&gameList[xIndex]!='O')); // makes sure user enters valid input
-                //}
             if (!gameOver){
                 int oInput;
                 int oIndex;
@@ -141,11 +139,10 @@ public class game {
                     oCount++;
                     createStructure(gameList);
 
-                    // createStructure(gameList);
+                    
                 }
             }while(!(oInput>=1 &&oInput<=9)&&(gameList[oIndex]!='X'&&gameList[oIndex]!='O'));
             }
-        // createStructure(gameList);
         }
         }//end of for loop
         if(!gameOver)
