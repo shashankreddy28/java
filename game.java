@@ -2,19 +2,21 @@ import java.util.Scanner;
 public class game {
 
 
-//not asking to reenter when user enters an existing position
     public static boolean checkGameOver(char[] gameList,int[] x , int[] o){
         boolean status = false;
         if (rowsCheck(gameList) == 'X' || rowsCheck(gameList) == 'O'){
             status = true;
+            System.out.println();
             System.out.printf("Player %c wins the game.\n",rowsCheck(gameList));
         }
         else if (columnsCheck(gameList) == 'X' || columnsCheck(gameList) == 'O'){
             status = true;
+            System.out.println();
             System.out.printf("Player %c wins the game.\n",columnsCheck(gameList));
         }
         else if (diagnolsCheck(gameList) == 'X' || diagnolsCheck(gameList) == 'O'){
             status = true;
+            System.out.println();
             System.out.printf("Player %c wins the game.\n",diagnolsCheck(gameList));
         }
         return status;
@@ -65,27 +67,31 @@ public class game {
     }
 
     public static void createTemplate(){
-        System.out.println("Here is the template for referance:");
-        System.out.print(" 1 | 2 | 3 \n");
-        System.out.println("--- --- ---");
-        System.out.print(" 4 | 5 | 6 \n");
-        System.out.println("--- --- ---");
-        System.out.print(" 7 | 8 | 9 \n");
+        System.out.println("   Here is your template :");
+        System.out.print("\n\t 1 | 2 | 3 \n");
+        System.out.println("\t--- --- ---");
+        System.out.print("\t 4 | 5 | 6 \n");
+        System.out.println("\t--- --- ---");
+        System.out.print("\t 7 | 8 | 9 \n");
+        System.out.println();
 }
 
     public static void createStructure(char[] gameList){
-            System.out.println("\t Current Game \t Template");
-            System.out.printf("\t %c | %c | %c \t 1 | 2 | 3 \n",gameList[0] , gameList[1] , gameList[2]);
-            System.out.println("\t--- --- --- \t--- --- ---");
-            System.out.printf("\t %c | %c | %c \t 4 | 5 | 6 \n",gameList[3] , gameList[4] , gameList[5]);
-            System.out.println("\t--- --- --- \t--- --- ---");
-            System.out.printf("\t %c | %c | %c \t 7 | 8 | 9 \n",gameList[6] , gameList[7] , gameList[8]);
+        System.out.println();
+        System.out.println("\t Current Game \t Template");
+        System.out.println();
+        System.out.printf("\t %c | %c | %c \t 1 | 2 | 3 \n",gameList[0] , gameList[1] , gameList[2]);
+        System.out.println("\t--- --- --- \t--- --- ---");
+        System.out.printf("\t %c | %c | %c \t 4 | 5 | 6 \n",gameList[3] , gameList[4] , gameList[5]);
+        System.out.println("\t--- --- --- \t--- --- ---");
+        System.out.printf("\t %c | %c | %c \t 7 | 8 | 9 \n",gameList[6] , gameList[7] , gameList[8]);
+        System.out.println();
     }
     public static void main(String[] args){
         boolean gameOver =false;
         Scanner in = new Scanner(System.in);
         
-        System.out.println("\nTic tac toe\n");
+        System.out.println("\n\tTic tac toe\n");
         createTemplate();
         int xCount = 0; // number of times player x plays
         int[] x = new int[5];
@@ -102,14 +108,14 @@ public class game {
                     int xIndex;
                     char prevXIndex ;
                     do{
-                        System.out.println("Player 'X' enter position to place 'X':");
+                        System.out.print("Player 'X' enter position to place 'X':");
                         xInput = in.nextInt();
                         xIndex = xInput-1; // this is basically converting the user's input to the index on the list, like if they want to enter 1 but the index of first element is 0.
                         prevXIndex = 'R';
                         if(xInput>=1 && xInput<=9){
                             prevXIndex=gameList[xIndex];
                             if(prevXIndex!='X'&&prevXIndex!='O'){
-                                System.out.println("entered if loop");//debugging
+                                //System.out.println("entered if loop");//debugging
                                 x[xCount]=xInput;
                                 gameList[xIndex]='X';
                                 gameOver = checkGameOver(gameList, x, o);
@@ -118,22 +124,22 @@ public class game {
                             }
                         }
                     }
-                    while ((xInput<1 ||xInput>9)||!(prevXIndex!='X'&&prevXIndex!='O'));
+                    while ((xInput<1 || xInput>9) || !(prevXIndex != 'X' && prevXIndex != 'O')); // using previous as when when the user response is valid, we will change the value at position to the element and it would meet the condition
 
             if (!gameOver){
                 int oInput;
                 int oIndex;
                 char prevOIndex;
                 do{
-                System.out.println("Player 'O' enter position to place 'O':");
+                System.out.print("Player 'O' enter position to place 'O':");
                 oInput = in.nextInt();
                 oIndex = oInput - 1;
                 prevOIndex = gameList[oIndex];
-                if(oInput>=1 &&oInput<=9){
-                    if(prevOIndex!='X'&&prevOIndex!='O'){
-                        System.out.println("Entered if loop (player o)");
-                        o[oCount]=oInput;
-                        gameList[oIndex]='O';
+                if(oInput >= 1 && oInput <= 9){
+                    if(prevOIndex != 'X' && prevOIndex != 'O'){
+                        //System.out.println("Entered if loop (player o)"); //debugging
+                        o[oCount] = oInput;
+                        gameList[oIndex] = 'O';
                         gameOver = checkGameOver(gameList, x, o);
                         oCount++;
                         createStructure(gameList);
@@ -142,20 +148,21 @@ public class game {
                     
                 }
             }
-            while ((oInput<1 ||oInput>9)||!(prevOIndex!='X'&&prevOIndex!='O'));
+            while ((oInput < 1 || oInput > 9) || !(prevOIndex != 'X' && prevOIndex != 'O'));
             }
         }
         }//end of for loop
         if(!gameOver){
-            for(int i =0; i<gameList.length;i++){
-                if(gameList[i]=='N'){
-                    gameList[i]='X';
+            for(int i =0; i < gameList.length;i++){
+                if(gameList[i] == 'N'){
+                    gameList[i] = 'X';
                 }
             }
             gameOver = checkGameOver(gameList, x, o);
+            if(gameOver){createStructure(gameList);};
         }
-        if(!gameOver){System.out.println("Tie");}
-        else{createStructure(gameList);}
+        if(!gameOver){System.out.println(); ;System.out.println("Tie");createStructure(gameList);}
+        //else{System.out.println(); createStructure(gameList);}
         in.close();
     }
     
