@@ -104,11 +104,28 @@
 
 
 
-class Main {
-    public static void main(String[] args) {
-      System.out.println("Hello world!");
-      String h= "a12345";
-      int a = (int)(h.charAt(0));// does not convert it to integer, rather, returns the ascii value of character.
-      System.out.print(a);
-    }
+// class Main {
+//     public static void main(String[] args) {
+//       System.out.println("Hello world!");
+//       String h= "a12345";
+//       int a = (int)(h.charAt(0));// does not convert it to integer, rather, returns the ascii value of character.
+//       System.out.print(a);
+//     }
+//   }
+
+public class Main {
+  // public void myFunction(int param1, double param2) {
+  //     System.out.println("This is the first function with int and double parameters: " + param1 + ", " + param2);
+  // }
+
+  public void myFunction(double param1, int param2) {
+      System.out.println("This is the second function with double and int parameters: " + param1 + ", " + param2);
   }
+
+  public static void main(String[] args) {
+      Main myClass = new Main();
+
+      // Calls the first function with int and double parameters
+      myClass.myFunction(10, 20);
+  }
+}

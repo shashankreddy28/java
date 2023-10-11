@@ -2,7 +2,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CIS122 {
+        private static int integer ;
     public static void main(String[] args) {
+        System.out.println(integer);
+
 
 ///single line test statements:-
         //Scanner in = new Scanner(System.in);
@@ -211,7 +214,8 @@ public class CIS122 {
         //         arrList.add(i+1);
         // }
 
-        // arrList.set(0,100); // use .set(index, element) to set element at index to element
+        // arrList.set(0,100); // use .set(index, element) to set element at index to element, so it replaces the value at index 0 to 100.
+        // arrList.add(0,100); //add 100 to the 0 index and moves the rest to the rigth so the length of teh list actually grows by 1.
         // arrList.set(arrList.size()-1,100); // the index should already exist so we cant add an element using .set() fnc
 
         // for (int element:arrList){ // we can use enhanced for loop in array list too
@@ -224,6 +228,8 @@ public class CIS122 {
         // arrList.add(102);
         // System.out.println(arrListcopy);
         //System.out.println(arrList.size()); //this is similar to .length of a normal list
+
+        
 
 
 // 2d array practice activity accessing method3
@@ -320,7 +326,7 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 //ch = 'a' + 'b'; will return a char that is the char of the sum of the ascii values of a and b. 
 
-//a method with void as the return type can have a 'return ;' this basically returns nothing, which is fin ewith void. 
+//a method with void as the return type can have a 'return ;' this basically returns nothing, which is fine with void. 
 
 
 // an array of boolean values will have 'false' as the default values
@@ -329,7 +335,24 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 
 
+// Ojects and classes
 
+// the constructor method is always the same name as the class itself.
+// syntax : public className(){}  notice that there is no return type, that is because this method is used for creating an oject of type the classname so java can do that implicitly
+
+// definition of overloading:-
+// in java, we can have multiple methods with the same name, it will not give an error as long as the parameter types are different.
+// all classes in java have need to have a constructor mothod, java creates 1 by default for all classes, that is why we can create objects, even when a constructor method was not created
+
+
+//overloading functions is creating many functions with same name
+//overriding is polymorphyism ig
+
+// understanding this(0);
+// a contructor can call another constructor by have "this(0);" in the body of the constructor then it calls another constructor with 0 as the parameter.
+// using of the this key word and how it works
+// Normally, this denotes a reference to the implicit parameter,
+// but if this is followed by parentheses, it denotes a call to another constructor of this class. 
 
 
 
