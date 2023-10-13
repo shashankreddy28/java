@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class CIS122 {
         private static int integer ;
     public static void main(String[] args) {
-        System.out.println(integer);
+//showing that variables declared in class have  default values 
+        //System.out.println(integer);
 
 
 ///single line test statements:-
@@ -45,6 +46,16 @@ public class CIS122 {
         // System.out.println(roundedVariable +"   " +roundeedInt);
         // int CIS122 = 40;//file name/class name can be used as a variable
         // System.out.println(CIS122);
+
+
+
+        // static in classes:-
+        
+        // anything static only exists with the class and never with one of its object
+
+        // a class that is created in the intent to never build a object of the class like MATH class exist and is called something.
+        // Math.PI is an example of a public static variable, it is very rare to use a public static variable, it is generally private static cause we dont want others outside to use it.
+
 
 //using lastIndexOf fnc
         // String str = "this is a long sentence.";
@@ -89,12 +100,12 @@ public class CIS122 {
         // int a = 2;
         // int b = 2;
         // int c = 4;
-        // int aSquare = a*a;
-        // int bSquare = b*b;
-        // int cSquare = c*c;
-        // double aSquare = Math.pow((double)(a),(double)(2));
-        // double bSquare = Math.pow((double)(b),(double)(2));
-        // double cSquare = Math.pow((double)(c),(double)(2));
+        // // int aSquare = a*a;
+        // // int bSquare = b*b;
+        // // int cSquare = c*c;
+        // double aSquare = Math.pow(a,2);
+        // double bSquare = Math.pow(b,2);
+        // double cSquare = Math.pow(c,2);
         // boolean test = (cSquare == (aSquare+bSquare));
         // if (a>=b && a>=c){
         //     test = (aSquare == (cSquare+bSquare));
@@ -233,9 +244,38 @@ public class CIS122 {
 
 
 // 2d array practice activity accessing method3
-        int[][] twoDArray = {{1,2},{3,4,10},{6,7},{-1,50}};
-        int[] sol = findMinMax(twoDArray);
-        for (int element:sol){System.out.println(element);}
+        // int[][] twoDArray = {{1,2},{3,4,10},{6,7},{-1,50}};
+        // int[] sol = findMinMax(twoDArray);
+        // for (int element:sol){System.out.println(element);}
+
+
+
+//array common algorithms testing
+        int[] x = new int[10];
+        x[0] = 4;
+        x[1] = 2;
+        x[2] = 9;
+        int currSize = 3;
+        int value = 1;
+        int pos = 1;
+        for(int i = currSize;i>pos;i--){
+                x[i] = x[i-1];
+
+        }
+        x[pos] = value;
+        currSize++;
+        for (int element:x){System.out.print(element + " ");}
+        System.out.println();
+        System.out.println(currSize);
+
+        for(int i=pos;i<currSize-1;i++){
+                x[i] = x[i+1];
+        }
+        currSize--;
+        for (int element:x){System.out.print(element + " ");}
+        System.out.println();
+        System.out.println(currSize);
+        
 
     }//end of main method
 
