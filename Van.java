@@ -3,6 +3,7 @@ import java.util.ArrayList;
 /**
    This class models a shuttle van.
    keeps track of names of passengers in the object, not in the class
+   can test using Vantester.java
 */
 public class Van
 {
