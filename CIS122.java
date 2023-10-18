@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class CIS122 {
         private static int integer ;
     public static void main(String[] args) {
-//showing that variables declared in class have  default values 
+//showing that variables declared in class have  default value
         //System.out.println(integer);
 
 
