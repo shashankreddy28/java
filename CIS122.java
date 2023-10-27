@@ -9,6 +9,7 @@ public class CIS122 {
 
 
 ///single line test statements:-
+        // no more notes are written down here, will only create new java files and run cause we are working objects now.
         //Scanner in = new Scanner(System.in);
         // System.out.println("Hello World!");
         // double mydouble = 10.1;
@@ -251,30 +252,30 @@ public class CIS122 {
 
 
 //array common algorithms testing
-        int[] x = new int[10];
-        x[0] = 4;
-        x[1] = 2;
-        x[2] = 9;
-        int currSize = 3;
-        int value = 1;
-        int pos = 1;
-        for(int i = currSize;i>pos;i--){
-                x[i] = x[i-1];
+        // int[] x = new int[10];
+        // x[0] = 4;
+        // x[1] = 2;
+        // x[2] = 9;
+        // int currSize = 3;
+        // int value = 1;
+        // int pos = 1;
+        // for(int i = currSize;i>pos;i--){
+        //         x[i] = x[i-1];
 
-        }
-        x[pos] = value;
-        currSize++;
-        for (int element:x){System.out.print(element + " ");}
-        System.out.println();
-        System.out.println(currSize);
+        // }
+        // x[pos] = value;
+        // currSize++;
+        // for (int element:x){System.out.print(element + " ");}
+        // System.out.println();
+        // System.out.println(currSize);
 
-        for(int i=pos;i<currSize-1;i++){
-                x[i] = x[i+1];
-        }
-        currSize--;
-        for (int element:x){System.out.print(element + " ");}
-        System.out.println();
-        System.out.println(currSize);
+        // for(int i=pos;i<currSize-1;i++){
+        //         x[i] = x[i+1];
+        // }
+        // currSize--;
+        // for (int element:x){System.out.print(element + " ");}
+        // System.out.println();
+        // System.out.println(currSize);
         
 
     }//end of main method

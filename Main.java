@@ -247,5 +247,49 @@ public class Main{
     // System.out.println(Coin.getTotalValue());
 
 
+
+
+
+    // for some challenge question 8.3.3
+    // import java.util.ArrayList;
+
+    // public class CountingArrayList extends ArrayList<String>
+    // {
+    //   /* Your code goes here */
+    //   private ArrayList<String> theList;
+      
+    //   public CountingArrayList(){
+    //      super();
+    //      theList = new ArrayList<String>();
+         
+    //      }
+       
+    //    /**
+    //       Gets the counter of get or set operations.
+    //       @param what "get" or "set"
+    //       @return the number of get or set operations invoked on this array list.
+    //    */
+    //    public int count(String what) 
+    //    {
+    //       int counter = 0;
+    //       for(String element:theList)
+    //       {
+    //          if(element.equals(what)){
+    //             counter++;
+    //          }
+    //       }
+    //       return counter;
+    //    }
+    //    public String set(int index, String element){
+          
+    //       theList.add("set");
+    //       return super.set(index,element);
+    //       }
+    //    public String get(int index, String element){
+          
+    //       theList.add("get");
+    //       return super.get(index);
+    //       }
+    // }
   }
 }
