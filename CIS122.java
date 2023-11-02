@@ -282,6 +282,13 @@ public class CIS122 {
         int[] mthd4 = {2,2,2,2,2,2,2,2,2};
         System.out.println(findSum(mthd4));
 
+// testing mthd5
+// it is a recursive max function
+        double[] mthd5 = {10,4,9,8,20,100,400,10,1};
+        System.out.println(findMax(mthd5));
+        System.out.println(findMin(mthd5));
+
+
     }//end of main method
 
 
@@ -345,6 +352,39 @@ public static int findSum(int[] arr, int end){
 public static int findSum(int[] arr){
         return findSum(arr, arr.length-1);
 
+}
+
+// mthd5
+// trying to write a recursive function that finds max in a array
+public static double findMax(double[] arr, int end){
+        if (end<=0){
+                return arr[0];
+        }
+        else{
+                return Math.max(arr[end],findMax(arr,end-1));
+        }
+}
+
+// helper method for mthd5
+public static double findMax(double[] arr){
+        return findMax(arr, arr.length-1);
+}
+
+
+
+// trying to write a recursive function that finds min in a array
+public static double findMin(double[] arr, int end){
+        if (end<=0){
+                return arr[0];
+        }
+        else{
+                return Math.min(arr[end],findMin(arr,end-1));
+        }
+}
+
+// helper method for mthd
+public static double findMin(double[] arr){
+        return findMin(arr, arr.length-1);
 }
         
 }//end of class
