@@ -277,6 +277,10 @@ public class CIS122 {
         // System.out.println();
         // System.out.println(currSize);
         
+// using mthd4 it is recursive function
+// here we are using helper method
+        int[] mthd4 = {2,2,2,2,2,2,2,2,2};
+        System.out.println(findSum(mthd4));
 
     }//end of main method
 
@@ -325,7 +329,23 @@ public static int[] findMinMax(int[][] input){
         result[0]=min;
         result[1] = max;
         return result;
-        }   
+        }
+//mthod 4 this is a recursive function
+public static int findSum(int[] arr, int end){
+        if(end<=0){
+                return arr[0];
+        }
+        else{
+                return arr[end]+findSum(arr, end-1);
+        }    
+}   
+// overloading this function
+// but creating the helper method for the main recursive method that is above, this is how we would add default values in java too
+// now user of the method can call method only on array and not worry about the second vaiable.
+public static int findSum(int[] arr){
+        return findSum(arr, arr.length-1);
+
+}
         
 }//end of class
 
