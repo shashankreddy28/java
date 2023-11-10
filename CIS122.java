@@ -2,10 +2,14 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CIS122 {
-        private static int integer ;
+        private static int integer ;//1
     public static void main(String[] args) {
+        int x;//2
 //showing that variables declared in class have  default value
+//note that a variable declared in the method doent not have default value.
         //System.out.println(integer);
+        //System.out.println(x);//4
+
 
 
 ///single line test statements:-

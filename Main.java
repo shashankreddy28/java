@@ -133,9 +133,9 @@
 //   }
 // }
 
-import java.util.ArrayList;
-public class Main{
-  public static void main(String[] args){
+// import java.util.ArrayList;
+// public class Main{
+//   public static void main(String[] args){
     // sample question27
 
     // ArrayList<String> ok = new ArrayList<String>();
@@ -291,5 +291,14 @@ public class Main{
     //       return super.get(index);
     //       }
     // }
+//   }
+// }
+
+
+public class Main{
+  public static void main(String[] args){
+    testingInterface x = new usingInterface(4);
+    System.out.println(x.getMeasure());
+
   }
 }
