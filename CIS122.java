@@ -9,6 +9,8 @@ public class CIS122 {
 //note that a variable declared in the method doent not have default value.
         //System.out.println(integer);
         //System.out.println(x);//4
+        
+
 
 
 
@@ -283,15 +285,31 @@ public class CIS122 {
         
 // using mthd4 it is recursive function
 // here we are using helper method
-        int[] mthd4 = {2,2,2,2,2,2,2,2,2};
-        System.out.println(findSum(mthd4));
+        // int[] mthd4 = {2,2,2,2,2,2,2,2,2};
+        // System.out.println(findSum(mthd4));
 
 // testing mthd5
 // it is a recursive max function
-        double[] mthd5 = {10,4,9,8,20,100,400,10,1};
-        System.out.println(findMax(mthd5));
-        System.out.println(findMin(mthd5));
+        
 
+        // double[] mthd5 = {10,4,9,8,20,100,400,10,1};
+        // System.out.println(findMax(mthd5));
+        // System.out.println(findMin(mthd5));
+
+
+//testing method6
+        // int[] arr = {1,10,1,10,10,10,10,1};
+        // System.out.println(countOccurance(arr, 10));
+// testing method7
+        // System.out.println(power(2,3));
+// testing method8
+        // System.out.println(isPalindrome("Aab")); //false
+        // System.out.println(isPalindrome("BroORb")); //true
+        // System.out.println(isPalindrome("HH"));//true
+// testing method9
+        // System.out.println(factorial(5));
+// testing method10
+                System.out.println(reverse("Ab"));
 
     }//end of main method
 
@@ -390,7 +408,67 @@ public static double findMin(double[] arr, int end){
 public static double findMin(double[] arr){
         return findMin(arr, arr.length-1);
 }
+       
+
+
+//method 6
+public static int countOccurance(int[] arr, int target){
+        return countOccurance(arr, target,0,arr.length-1);
+}
+public static int countOccurance(int[] arr, int target, int start, int end){
         
+        
+        if(end>=start){
+                if(arr[end]==target){return 1+countOccurance(arr, target, start, end-1);}
+                return countOccurance(arr, target, start, end-1);
+        }
+        else{return 0;}
+
+}
+
+//method 7
+//recursive power method
+public static int power(int base, int pow){
+        if(pow>0){return base* power(base,pow-1);}
+        else{return 1;}
+}
+
+// method8
+// recursive palindrome func
+public static boolean isPalindrome(String str){
+        return isPalindrome(str, 0,str.length()-1);
+}
+public static boolean isPalindrome(String str, int start, int end){
+        if(start>=end){return true;}
+        else{
+                if(Character.toLowerCase(str.charAt(end)) == Character.toLowerCase(str.charAt(start))){
+                        return isPalindrome(str,start+1,end-1);
+                }
+                else{return false;}
+        }
+}
+
+// method9
+// recursive factorial
+public static int factorial(int x){
+        if(x<=1){return 1;}
+        else{
+                return x * factorial(x-1);
+        }
+}
+
+
+// method 10
+// reverse string
+public static String reverse(String str, int start,int end){
+        if(end<start){return "";}
+        else{return str.charAt(end)+reverse(str, start, end-1);}
+
+}
+public static String reverse(String str){
+        return reverse(str,0,str.length()-1);
+}
+
 }//end of class
 
 
@@ -652,3 +730,8 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 //         values[i - 1] = values[i]; 
 //      }
 //      currentSize--;
+
+
+//#8
+// used to find the occurance of an element in an array
+

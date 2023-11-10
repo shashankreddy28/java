@@ -295,10 +295,45 @@
 // }
 
 
-public class Main{
-  public static void main(String[] args){
-    testingInterface x = new usingInterface(4);
-    System.out.println(x.getMeasure());
+// public class Main{
+//   public static void main(String[] args){
+//     testingInterface x = new usingInterface(4);
+//     System.out.println(x.getMeasure());
 
+//   }
+// }
+
+class Superclass {
+  private int value;
+
+  // Superclass's equals method
+  @Override
+  public boolean equals(Object obj) {
+      if (this == obj) {
+          return true;
+      }
+      // if (obj == null || getClass() != obj.getClass()) // checks if they are of the same class
+      if (obj == null || !(obj instanceof Superclass)) { //checks if obj is of class Superclass or of its subclasses
+          return false;
+      }
+      Superclass other = (Superclass) obj; // this is possible, remember, we can always type cast subclass as super class
+      return this.value == other.value;
+  }
+}
+
+class Subclass extends Superclass {
+  private String name;
+
+  // Subclass does not provide its own equals method, so it inherits from Superclass
+
+  // Additional subclass-specific fields and methods...
+}
+
+public class Main {
+  public static void main(String[] args) {
+      Superclass obj1 = new Superclass();
+      Superclass obj2 = new Subclass();
+
+      System.out.println(obj1.equals(obj2));  // Calls Superclass's equals method
   }
 }
