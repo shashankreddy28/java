@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class CIS122 {
@@ -309,7 +312,63 @@ public class CIS122 {
 // testing method9
         // System.out.println(factorial(5));
 // testing method10
-                System.out.println(reverse("Ab"));
+                //System.out.println(reverse("Ab"));
+
+
+
+
+// mavPass question:-
+                // q1
+                LinkedList<String> animals = new LinkedList<>();
+                animals.addLast("Dog");
+                animals.addLast("Horse");
+                animals.addLast("Cat");
+                animals.addLast("Lizard");
+                animals.addLast("Dinosaur");
+                // q2
+                for(String element:animals){
+                        System.out.print(element + " ");
+                }
+                System.out.println();
+                
+
+
+                ListIterator<String> iter = animals.listIterator();
+                while(iter.hasNext()){iter.next();}
+                 
+                while(iter.hasPrevious()){System.out.print(iter.previous()+" ");}
+                System.out.println();
+                while(iter.hasNext()){iter.next();}
+                iter.remove();
+                printElem(animals);
+                while(iter.hasPrevious()){
+                        String element = iter.previous(); 
+                        if(element.equals("Horse")){
+                                iter.set("Goldfish");
+                        }
+                }
+                printElem(animals);
+
+                while(iter.hasNext()){
+                        String element = iter.next();
+                        if(element.equals("Cat")){
+                                iter.add("chicken");
+                        }
+                }
+                printElem(animals);
+
+                while(iter.hasPrevious()){
+                        String element = iter.previous();
+                        if(element.equals("Goldfish")){
+                                iter.remove();
+                        }
+                }
+                printElem(animals);
+                
+                //printElem(animals);
+                
+
+
 
     }//end of main method
 
@@ -467,6 +526,14 @@ public static String reverse(String str, int start,int end){
 }
 public static String reverse(String str){
         return reverse(str,0,str.length()-1);
+}
+
+// used to print elements in linked list
+public static void printElem(LinkedList<String> l){
+        for(String element:l){
+                System.out.print(element + " ");
+        }
+        System.out.println();
 }
 
 }//end of class
