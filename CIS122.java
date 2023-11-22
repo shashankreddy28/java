@@ -319,53 +319,54 @@ public class CIS122 {
 
 // mavPass question:-
                 // q1
-                LinkedList<String> animals = new LinkedList<>();
-                animals.addLast("Dog");
-                animals.addLast("Horse");
-                animals.addLast("Cat");
-                animals.addLast("Lizard");
-                animals.addLast("Dinosaur");
-                // q2
-                for(String element:animals){
-                        System.out.print(element + " ");
-                }
-                System.out.println();
+                // LinkedList<String> animals = new LinkedList<>();
+                // animals.addLast("Dog");
+                // animals.addLast("Horse");
+                // animals.addLast("Cat");
+                // animals.addLast("Lizard");
+                // animals.addLast("Dinosaur");
+                // // q2
+                // for(String element:animals){
+                //         System.out.print(element + " ");
+                // }
+                // System.out.println();
                 
 
 
-                ListIterator<String> iter = animals.listIterator();
-                while(iter.hasNext()){iter.next();}
+                // ListIterator<String> iter = animals.listIterator();
+                // while(iter.hasNext()){iter.next();}
                  
-                while(iter.hasPrevious()){System.out.print(iter.previous()+" ");}
-                System.out.println();
-                while(iter.hasNext()){iter.next();}
-                iter.remove();
-                printElem(animals);
-                while(iter.hasPrevious()){
-                        String element = iter.previous(); 
-                        if(element.equals("Horse")){
-                                iter.set("Goldfish");
-                        }
-                }
-                printElem(animals);
+                // while(iter.hasPrevious()){System.out.print(iter.previous()+" ");}
+                // System.out.println();
+                // while(iter.hasNext()){iter.next();}
+                // iter.remove();
+                // printElem(animals);
+                // while(iter.hasPrevious()){
+                //         String element = iter.previous(); 
+                //         if(element.equals("Horse")){
+                //                 iter.set("Goldfish");
+                //         }
+                // }
+                // printElem(animals);
 
-                while(iter.hasNext()){
-                        String element = iter.next();
-                        if(element.equals("Cat")){
-                                iter.add("chicken");
-                        }
-                }
-                printElem(animals);
+                // while(iter.hasNext()){
+                //         String element = iter.next();
+                //         if(element.equals("Cat")){
+                //                 iter.add("chicken");
+                //         }
+                // }
+                // printElem(animals);
 
-                while(iter.hasPrevious()){
-                        String element = iter.previous();
-                        if(element.equals("Goldfish")){
-                                iter.remove();
-                        }
-                }
-                printElem(animals);
+                // while(iter.hasPrevious()){
+                //         String element = iter.previous();
+                //         if(element.equals("Goldfish")){
+                //                 iter.remove();
+                //         }
+                // }
+                // printElem(animals);
                 
                 //printElem(animals);
+
                 
 
 
