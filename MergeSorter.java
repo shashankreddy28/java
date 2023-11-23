@@ -1,22 +1,13 @@
 public class MergeSorter{
     public static void main(String[] args){
-        //test array
         int[] arr = {5,9,8,1,3,4,2,5};
         int[] arr2 = {10,100,1,500,1000,3,2,6,4,40,55,90};
         Sort(arr);
-        printArr(arr);
+        CIS122.printArr(arr);
         Sort(arr2);
-        //printing all elements
-        printArr(arr2);
-        
-        
+        CIS122.printArr(arr2);   
     }
-    public static void printArr(int[] arr){
-        for (int element: arr){
-            System.out.print(element+" ");
-        }
-        System.out.println();
-    }
+    
     public static void Sort(int[] arr){
         Sort(arr,0,arr.length-1);
     }

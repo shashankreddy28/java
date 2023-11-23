@@ -537,6 +537,20 @@ public static void printElem(LinkedList<String> l){
         System.out.println();
 }
 
+// creating method to print elements in a int[] 
+public static void printArr(int[] arr){
+        System.out.print("[");
+        for (int index = 0;index<arr.length;index++){
+            int element = arr[index];
+            System.out.print(element);
+            if(index!=arr.length-1){
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+        
+    }
+
 }//end of class
 
 
