@@ -1,6 +1,5 @@
 import java.util.LinkedList;
 import java.util.ListIterator;
-import java.util.Iterator;
 public class LinkedListTest{
     public static void main(String[] args){
         LinkedList<String> list = new LinkedList<>();
@@ -14,12 +13,17 @@ public class LinkedListTest{
             iter.add("and"); // adds element right before the iterator
         }
         System.out.println();
+
         System.out.println(list.contains("Bro"));
+        
         for(String element: list){
             System.out.print(element + " ");
         }
+        
         System.out.println();
+        
         if(iter.hasPrevious()){iter.previous();iter.add("new word");} // we can see that .add() only adds element right before the iterator position 
+        
         for(String element: list){
             System.out.print(element + " ");
         }
