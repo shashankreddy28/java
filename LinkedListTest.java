@@ -6,7 +6,9 @@ public class LinkedListTest{
         list.add("Hi");
         list.add("Hello");
         list.add("Bro");
+        
         ListIterator<String> iter = list.listIterator();
+
         while(iter.hasNext()){
             System.out.print(iter.next() + " ");
             iter.remove(); // removes the element the iterator just went over
