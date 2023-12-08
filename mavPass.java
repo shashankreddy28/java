@@ -47,4 +47,8 @@ public class mavPass {
             return base * powerN(base, exponent-1);
         }
     }
+    public static int fact(int num){
+        if(num<=1){return 1;}
+        else{return num* fact(num-1);}
+    }
 }

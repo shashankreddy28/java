@@ -14,7 +14,8 @@ public class mavPass2 {
         for(Rect i : arr){System.out.println(i);}
         Collections.sort(arr);
         System.out.println();
-        for(Rect i : arr){System.out.println(i);}       
+        for(Rect i : arr){System.out.println(i);} 
+
     }
 }
 
@@ -55,9 +56,9 @@ class Rect implements Shape , Comparable{
 }
 class Circle implements Shape{
     private int radius;
-    public Circle(){
-        radius =0;
-    }
+    // public Circle(){
+    //     radius =0;
+    // }
     public Circle(int r){
         radius = r;
     }
