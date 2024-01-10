@@ -5,7 +5,7 @@ import java.util.ListIterator;
 import java.util.Scanner;
 
 public class CIS122 {
-        private static int integer ;//1
+
     public static void main(String[] args) {
         int x;//2
 //showing that variables declared in class have  default value
@@ -684,6 +684,7 @@ USE Math.floorMod(a,b) as long as b is positive, it will not give negative value
 
 //     }
 // }
+
 
 
 
