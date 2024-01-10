@@ -4,9 +4,9 @@ public class TicTacToe {
     public static void main(String[] args){
         System.out.println("\n\n\n    Hello, Lets Play Tic Tac Toe\n\n\n");
         Scanner in = new Scanner(System.in);
-        System.out.println("\'X\' Player Enter your Name: ");
+        System.out.print("\'X\' Player Enter your Name: ");
         String playerXName = in.nextLine();
-        System.out.println("\'O\' Player Enter your Name: ");
+        System.out.print("\'O\' Player Enter your Name: ");
         String playerOName = in.nextLine();
         String playAgain;
         do{
@@ -20,7 +20,6 @@ public class TicTacToe {
         in.close();
         
     }
-
     
 }
 class gameBoard{
@@ -190,7 +189,7 @@ class player{
             game.createStructure();
         }
         do{
-        System.out.println(this.getName()+"\'s turn to play.Enter the position: ");
+        System.out.print(this.getName()+"\'s turn to play. \n Enter the position: ");
         int input = in.nextInt();
         ValSet = game.setValue(input, value);
         }
