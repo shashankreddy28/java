@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.lang.Comparable;
 
 public class mavPass2 {
     public static void main(String[] args){
